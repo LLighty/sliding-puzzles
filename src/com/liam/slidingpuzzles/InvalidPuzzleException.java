@@ -9,7 +9,4 @@ public class InvalidPuzzleException extends Exception {
         super(message);
     }
 
-    public InvalidPuzzleException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

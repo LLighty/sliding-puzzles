@@ -29,8 +29,10 @@ public class Main {
                 Puzzle.printPuzzle(element);
                 System.out.println();
             });
-
         } catch (InvalidPuzzleException e){
+            e.printStackTrace();
+        } catch (UnsolvablePuzzleException e) {
+            System.out.println("This puzzle cannot be solved!");
             e.printStackTrace();
         }
     }
