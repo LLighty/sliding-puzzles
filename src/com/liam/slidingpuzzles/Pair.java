@@ -13,4 +13,12 @@ public class Pair{
     public String toString(){
         return "row: " + row + ", col: " + col;
     }
+
+    public int getRow(){
+        return row;
+    }
+
+    public int getCol(){
+        return col;
+    }
 }

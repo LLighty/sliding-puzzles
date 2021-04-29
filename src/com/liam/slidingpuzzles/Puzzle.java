@@ -92,8 +92,10 @@ public class Puzzle {
 
     public static boolean validPuzzle(Puzzle puzzle){
         //First check the dimensions n=m
-        if(puzzle.layout.length != puzzle.layout[0].length){
-            return false;
+        for(int i = 0; i < puzzle.layout.length; i++){
+            if(puzzle.layout.length != puzzle.layout[i].length){
+                return false;
+            }
         }
 
         //Ensure that all numbers are accounted for (-1 : (length*length-2)
@@ -295,7 +297,7 @@ public class Puzzle {
         return neighbours;
     }
 
-    private int[][] copyLayout(){
+    public int[][] copyLayout(){
         int[][] newLayout = new int[layout.length][layout.length];
         for (int i = 0; i < layout.length; i++) {
             for (int j = 0; j < layout.length; j++) {
